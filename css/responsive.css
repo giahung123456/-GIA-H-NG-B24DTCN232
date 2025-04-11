@@ -1,0 +1,32 @@
+/* Chứa các quy tắc CSS để làm cho giao diện tương thích trên nhiều thiết bị (mobile, tablet, desktop) */
+.header-text,
+.articleFirst,
+.personalFinance,
+.chooseMonth-text,
+.monthlyBudget-text,
+.monthlyCategoryManagement-text,
+.transactionHistory-text,
+.monthlySpendingStatistics-text {
+    display: flex;
+}
+
+@media screen and (min-width:769px) {
+    .secondary-icon {
+        display: none;
+    }
+}
+
+@media screen and (max-width:768px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .secondary-icon {
+        display: block;
+    }
+
+    .main-icon {
+        display: none;
+    }
+}

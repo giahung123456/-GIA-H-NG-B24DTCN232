@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <script src="https://kit.fontawesome.com/9fa2b19335.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main class="container">
+        <header>
+            <div class="header-text">
+                <span class="main-icon" aria-label="Notebook icon">📒</span>
+                <span class="secondary-icon"><i class="fa-regular fa-book"></i></span>
+                Tài Chính Cá Nhân K24_Rikkei
+            </div>
+            <div class="user_logout">
+                <div>
+                    Tài khoản
+                    <button id="arrowAccount" type="button">
+                        <img id="btnShow" src="../assets/SVG.png" alt="Show account options">
+                        <img id="btnHide" style="display: none;" src="../assets/SVG2.png" alt="Hide account options">
+                    </button>
+                </div>
+                <button style="display: none;" id="logout" type="button">Đăng xuất</button>
+            </div>
+        </header>
+        <div id="logoutNotification">
+            <div class="center-text">Bạn có chắc muốn đăng xuất không?</div>
+            <div class="btnlogout">
+                <button id="btnlogout_yes" type="button">Có</button>
+                <button id="btnlogout_no" type="button">Không</button>
+            </div>
+        </div>
+        <div id="deleteNotification">
+            <div class="center-text">Bạn có chắc muốn xoá danh mục không?</div>
+            <div class="btnDlt">
+                <button id="btnDlt_yes" type="button">Có</button>
+                <button id="btnDlt_no" type="button">Không</button>
+            </div>
+        </div>
+        <article>
+            <div class="articleFirst">
+                <span class="main-icon" aria-label="Target icon">🎯</span>
+                <span class="secondary-icon"><i class="fa-solid fa-bullseye"></i></span>
+                Kiểm soát chi tiêu thông minh
+            </div>
+            <div>Theo dõi ngân sách và thu chi hằng tháng dễ dàng</div>
+        </article>
+        <section>
+            <div class="personalFinance">
+                <span class="main-icon" aria-label="Chart icon">📊</span>
+                <span class="secondary-icon"><i class="fa-solid fa-chart-column"></i></span>
+                Quản Lý Tài Chính Cá Nhân
+            </div>
+            <div class="chooseMonth">
+                <label class="chooseMonth-text" for="chooseMonth-input">
+                    <span class="main-icon" aria-label="Calendar icon">📅</span>
+                    <span class="secondary-icon"><i class="fa-solid fa-calendar-days"></i></span>
+                    Chọn tháng:
+                </label>
+                <input id="chooseMonth-input" type="month" name="month">
+            </div>
+            <div class="monthlyBudget">
+                <label class="monthlyBudget-text" for="monthlyBudget-input">
+                    <span class="main-icon" aria-label="Money icon">💰</span>
+                    <span class="secondary-icon"><i class="fa-solid fa-sack-dollar"></i></span>
+                    Ngân sách tháng:
+                </label>
+                <input id="monthlyBudget-input" type="number">
+                <button id="monthlyBudget-button" type="button">Lưu</button>
+            </div>
+            <div class="remainingAmount">
+                <div class="remainingAmount-text">Số tiền còn lại</div>
+                <div id="remainingAmount-number">0 VND</div>
+            </div>
+            <div id="editNotice">
+                <form>
+                    <label for="textEdit">Tên:</label>
+                    <input type="text" id="textEdit">
+                    <label for="numberEdit">Giá:</label>
+                    <input type="number" id="numberEdit">
+                    <button type="submit" id="editSuccess">Sửa</button>
+                    <button type="button" id="editExitSuccess">Thoát</button>
+                </form>
+            </div>
+            <div class="monthlyCategoryManagement">
+                <div class="monthlyCategoryManagement-text">
+                    <span class="main-icon" aria-label="Briefcase icon">💼</span>
+                    <span class="secondary-icon"><i class="fa-solid fa-briefcase"></i></span>
+                    Quản lý danh mục (theo tháng)
+                </div>
+                <div class="monthlyCategoryManagement-input-btn">
+                    <input id="monthlyCategoryManagement-CategoryName" type="text" placeholder="Tên danh mục">
+                    <input id="monthlyCategoryManagement-LimitMoney" type="number" placeholder="Giới hạn (VND)">
+                    <button id="btn-addCategory" type="button">Thêm danh mục</button>
+                </div>
+                <div id="monthlyCategoryManagement-Lists">
+                    <div id="no-categories" style="display: none;">Chưa có danh mục nào.</div>
+                    <div class="monthlyCategoryManagement_List">
+                        <div>Tiền phòng - Giới hạn: <span>2,000,000 VND</span></div>
+                        <div class="monthlyCategoryManagement-List-edit-delete">
+                            <span class="monthlyCategoryManagement-List-edit" data-id="monthlyCategoryManagement-List-edit">Sửa</span>
+                            <span class="monthlyCategoryManagement-List-delete">Xoá</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="spending">
+                <label for="spending-numberMoney">Số tiền:</label>
+                <input id="spending-numberMoney" placeholder="Số tiền" type="number">
+                <button class="spending-text" type="button">Tiền chi tiêu</button>
+                <label for="spending-note">Ghi chú:</label>
+                <input id="spending-note" placeholder="Ghi chú" type="text">
+                <button id="spending-addBtn" type="button">Thêm</button>
+            </div>
+            <div class="transactionHistory">
+                <div class="transactionHistory-text">
+                    <span class="main-icon" aria-label="Invoice icon">🧾</span>
+                    <span class="secondary-icon"><i class="fa-solid fa-file-invoice"></i></span>
+                    Lịch sử giao dịch
+                </div>
+                <div class="search-sort">
+                    <button class="search-text" type="button"><img src="../assets/SVG (1).png" alt="Search icon">Tìm nội dung</button>
+                    <button class="searchBtn" type="button"><img src="../assets/SVG (3).png" alt="Search button"></button>
+                    <button class="sortBtn" type="button">Sắp xếp theo giá</button>
+                </div>
+                <div id="transactionHistory_list">
+                    <div class="transactionHistory-listLine">
+                        <div class="transactionHistory-listLine_text">
+                            <div>Tiền xăng xe</div>-
+                            <div>Đổ xăng 21/3</div>:
+                            <div><span>100,000</span> VND</div>
+                        </div>
+                        <div class="transactionHistory-listLine_delete">Xoá</div>
+                    </div>
+                </div>
+                <div class="pagination">
+                    <nav>
+                        <div class="transactionHistory-prev">Previous</div>
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div class="transactionHistory-next">Next</div>
+                    </nav>
+                </div>
+            </div>
+            <div class="maxMoneyCategory">
+                <div>Danh mục "Tiền ăn" đã vượt giới hạn: 1,060,000 / 1,000,000 VND</div>
+            </div>
+        </section>
+        <div class="monthlySpendingStatistics">
+            <div class="monthlySpendingStatistics-text">
+                <span class="main-icon" aria-label="Calendar icon">📆</span>
+                <span class="secondary-icon"><i class="fa-solid fa-calendar-days"></i></span>
+                Thống kê chi tiêu các tháng
+            </div>
+            <div class="monthlySpendingStatisticsList">
+                <div class="monthlySpendingStatisticsList-line">
+                    <div>Tháng</div>
+                    <div>Chi tiêu</div>
+                    <div>Ngân sách</div>
+                    <div>Trạng thái</div>
+                </div>
+                <div class="monthlySpendingStatisticsList-line">
+                    <div>2025-03</div>
+                    <div>2,150,000 VND</div>
+                    <div>5,000,000 VND</div>
+                    <div class="status-success">✅Đạt</div>
+                </div>
+                <div class="monthlySpendingStatisticsList-line">
+                    <div>2025-04</div>
+                    <div>2,350,000 VND</div>
+                    <div>4,000,000 VND</div>
+                    <div class="status-error">Vượt</div>
+                </div>
+            </div>
+        </div>
+        <footer>© 2025 Quản Lý Tài Chính Cá Nhân. by Gia Hưng!</footer>
+    </main>
+    <script src="../js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

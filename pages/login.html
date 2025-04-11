@@ -1,0 +1,34 @@
+<!-- Giao diện trang đăng nhập -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập</title>
+</head>
+
+<link rel="stylesheet" href="../css/login.css">
+<script src="https://kit.fontawesome.com/9fa2b19335.js" crossorigin="anonymous"></script>
+
+<body>
+    <div class="login">
+        <div class="h3SignIn"><i class="fa-solid fa-lock"></i> <i class="fa-solid fa-key"></i>Đăng Nhập</div>
+        <div class="login-con">
+            <input type="text" id="loginName" placeholder="tên đăng nhập" name="loginName">
+            <div id="exist" style="display: none;color: red">tài khoản không tồn tại</div>
+            <input type="password" id="password" placeholder="mật khẩu" name="password">
+            <div id="notTrue" style="display: none;color: red">mật khẩu không đúng</div>
+            <button id="accountSignIn">đăng nhập</button>
+        </div>
+        <div class="linkSignUp">
+            <div>Chưa có tài khoản? </div>
+            <a class="aSignUp" href="./register.html">Đăng ký ngay</a>
+        </div>
+    </div>
+
+    <script src="../js/login.js"></script>
+
+</body>
+
+</html>

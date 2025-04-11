@@ -1,0 +1,43 @@
+<!-- Giao diện trang đăng ký -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Đăng Ký</title>
+</head>
+<link rel="stylesheet" href="../css/register.css">
+
+<body>
+   <div class="register">
+      <div class="h3SignUp">Đăng ký tài khoản</div>
+      <div class="register-con">
+         <input placeholder="tên tài khoản" id="username" name="username" type="text">
+         <div id="empty_user" style="display: none;">ô điền không được rỗng</div>
+         <div id="exist_user" style="display: none;">tài khoản đã tồn tại</div>
+         <input placeholder="mật khẩu" id="password" name="password" type="password">
+         <div id="empty_password" style="display: none;">ô điền không được rỗng</div>
+         <div id="numberCharacter_password" style="display: none;">mật khẩu tối đa là 6 kí tự
+         </div>
+         <input placeholder=" xác nhận mật khẩu" id="repeatPassword" name="repeatPassword" type="password">
+         <div id="empty_repeatPassword" style="display: none;">ô điền không được rỗng</div>
+         <div id="match_repeatPassword" style="display: none;">mật khẩu xác nhận không trùng
+            khớp với mật khẩu
+            ở trên</div>
+         <input placeholder="email" id="email" type="text">
+         <div style="display: none;" id="empty_email">ô điền không để trống</div>
+         <div style="display: none;" id="format_email">email không hợp lệ</div>
+         <div style="display: none" id="exist_email">email đã tồn tại</div>
+         <button id="accountSignUp">Đăng Ký</button>
+      </div>
+      <div class="linkSignIn">
+         <div>Đã có tài khoản? </div>
+         <a id="aSignIn" href="./login.html">đăng nhập</a>
+      </div>
+
+   </div>
+   <script src="../js/register.js"></script>
+</body>
+
+</html>

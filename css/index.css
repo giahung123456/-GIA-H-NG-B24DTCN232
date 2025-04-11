@@ -1,0 +1,591 @@
+/* Trang layout chung cho trang web */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    top: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #E5E7EB;
+
+}
+
+header {
+    top: 0;
+    background-color: #4338CA;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    position: fixed;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+/* nút đăng xuất */
+#logout {
+    top: 40px;
+    position: fixed;
+    border: 2px solid rgb(74, 73, 73);
+    height: 50px;
+    width: 97.5px;
+    background-color: rgb(250, 153, 18);
+}
+
+#logout:hover {
+    background-color: rgb(47, 156, 19);
+    color: white;
+}
+
+/* thông báo đăng xuất */
+
+#logoutNotification { 
+   position: fixed;
+   display: none;
+   height: 135px;
+   width: 200px;
+   border: none;
+   background-color: white;
+   top: 100px;
+   right: 191px;
+   border-radius: 12px;
+   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+   padding: 10px;
+    align-content: center;
+}
+.block{
+    display: block;
+}
+.none{
+    display: none;
+}
+.btnlogout {
+   display: flex;
+   justify-content: space-around;
+   margin-top: 30px;
+}
+.btnlogout button{
+   border-radius: 4px;
+   height:30px;
+}
+ #btnlogout_no{
+   background-color: rgb(190, 53, 53);
+   color: white;
+   border: none;
+
+}
+
+ #btnlogout_yes{
+   background-color: #11d91e;
+   color: white;
+   border: none;
+   
+}
+#arrowAccount {
+    height: 100%;
+    background-color: #4338CA;
+    border: none;
+}
+
+#arrowAccount:hover {
+    background-color: rgb(250, 153, 18);
+}
+
+article {
+    /* position: relative; */
+    width: 768px;
+    height: 124px;
+    background-color: #4F46E5;
+    margin: auto;
+    margin-top: 84px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+}
+
+.articleFirst {
+    font-size: 24px;
+}
+
+/* Quản Lý Tài Chính Cá Nhân */
+section {
+    width: 720px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    box-sizing: border-box;
+}
+
+.personalFinance {
+    font-size: 30px;
+    margin-left: 154.98px;
+    margin-top: 24px;
+}
+
+/* chọn tháng */
+.chooseMonth {
+    width: 100%;
+    height: 90px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    color: #6B7280;
+    font-size: 12.47px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+#chooseMonth-input {
+    width: 178px;
+    height: 42px;
+    border-radius: 6px;
+    border: 2px solid #DEE2E6;
+}
+
+/* chọn Ngân sách tháng */
+.monthlyBudget {
+    width: 100%;
+    height: 98px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.monthlyBudget-text {
+    color: #6B7280;
+    font-size: 13.02px;
+}
+
+#monthlyBudget-input {
+    width: 192px;
+    height: 42px;
+    border-radius: 6px;
+    border: 2px solid #DEE2E6;
+}
+
+#monthlyBudget-button {
+    width: 75.7px;
+    height: 40px;
+    border-radius: 6px;
+    border: none;
+    background-color: #3B82F6;
+    color: white;
+}
+
+/*  thông báo số tiền còn lại  */
+.remainingAmount {
+    width: 100%;
+    height: 98px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.remainingAmount-text {
+    color: #6B7280;
+    font-size: 15.88px;
+}
+
+#remainingAmount-number {
+    font-size: 24px;
+    color: #22C55E;
+}
+#editNotice{
+    display: none;
+    position: fixed;
+    border: 5px solid black;
+    background-color: #e2ac70;
+    width: 200px;
+    height: 200px;
+    top: 40%;
+    right: 45%;
+    padding: 10px;
+    gap: 5px;
+}
+#editNotice button{
+    margin-top: 10px;
+    /* height: 100%; */
+}
+#editSuccess{
+    background-color: #11d91e;
+}
+#editExitSuccess{
+    background-color: rgb(218, 140, 140);
+}
+/* quản lí danh mục(theo tháng) */
+.monthlyCategoryManagement {
+    width: 100%;
+    /* height: 258px; */
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px;
+    box-sizing: border-box;
+
+}
+
+.monthlyCategoryManagement-text {
+    font-family: "Segoe UI Symbol",sans-serif;
+    font-size: 18px;
+}
+
+.monthlyCategoryManagement-input-btn {
+    display: flex;
+    gap: 7.58px;
+    height: 42px;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+#monthlyCategoryManagement-CategoryName,
+#monthlyCategoryManagement-LimitMoney {
+    width: 246.42px;
+    height: 100%;
+    border-radius: 6px;
+    border: 2px solid #DEE2E6;
+}
+
+#btn-addCategory {
+    width: 163.16px;
+    height: 100%;
+    border: none;
+    color: white;
+    background-color: #22C55E;
+    border-radius: 6px;
+}
+
+/* quản lí danh mục(theo tháng)-list */
+#monthlyCategoryManagement-Lists {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.monthlyCategoryManagement_List {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 2px solid #DEE2E6;
+    margin-bottom: 5px;
+}
+
+.monthlyCategoryManagement-List-edit-delete {
+    color: #DC2626;
+    
+}
+.monthlyCategoryManagement-List-delete,.monthlyCategoryManagement-List-edit{
+    cursor: pointer;
+}
+
+/* tiền chi tiêu */
+.spending {
+
+    width: 100%;
+    height: 90px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    gap: 24px;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+#spending-numberMoney,
+#spending-note,
+.spending-text,
+#spending-addBtn {
+    height: 100%;
+    width: 150px;
+    border-radius: 6px;
+    border: 2px solid #DEE2E6;
+    text-align: center;
+}
+
+#spending-addBtn {
+    background-color: #6366F1;
+    border: none;
+    color: white;
+}
+
+/* lịch sử giao dịch */
+.transactionHistory {
+    width: 100%;
+    height: 258px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px;
+    box-sizing: border-box;
+}
+/* .transactionHistory-list{
+    display: flex; 
+   
+    width: 100%;
+}
+#transactionHistory-listLine{
+    display: flex;
+ 
+}
+.transactionHistory-text {
+    font-size: 17.72px;
+    color: #EF4444;
+    height: 42px;
+    width: 100%;
+} */
+
+.search-sort {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    gap: 8px;
+    height: 38px;
+}
+
+.search-text {
+    color: #9CA3AF;
+    height: 100%;
+    width: 158.55px;
+    border-radius: 8px;
+    background-color: #F9FAFB;
+    border: 2px solid #DEE2E6;
+    text-align: left;
+}
+
+.sortBtn {
+    color: #9CA3AF;
+    height: 100%;
+    width: 158.55px;
+    border-radius: 8px;
+    border: 2px solid #DEE2E6;
+    background-color: #F9FAFB;
+}
+
+.searchBtn {
+    height: 100%;
+    width: 38px;
+    background-color: #1D4ED8;
+    border: none;
+    border-radius: 8px;
+}
+
+.searchBtn img {
+    margin: auto;
+}
+
+/* lịch sử giao dịch-list */
+#transactionHistory_list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.transactionHistory-listLine {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+   
+    border-bottom: 2px solid #E5E7EB;
+    margin-bottom: 5px;
+}
+
+.transactionHistory-listLine_text {
+    display: flex;
+}
+
+.transactionHistory-listLine_delete {
+    cursor: pointer;
+    color: #DC2626;
+    font-size: 20px;
+}
+
+/* phân trang lịch sử giao dịch */
+.pagination {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 24px;
+}
+
+nav {
+    width: 247px;
+    height: 38px;
+    border: 2px solid #E5E7EB;
+    border-radius: 5px;
+    display: flex;
+    box-sizing: border-box;
+
+}
+
+nav div {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    border-right: 2px solid #E5E7EB;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 11px;
+    color: #0D6EFD;
+}
+
+nav div:nth-child(2):hover,
+nav div:nth-child(3):hover,
+nav div:nth-child(4):hover {
+    background-color: #0D6EFD;
+    color: white;
+
+}
+
+nav div:nth-child(5):hover {
+    background-color: #0D6EFD;
+    color: white;
+    border-radius: 5px;
+}
+
+.transactionHistory-prev {
+    background-color: #E9ECEF;
+    color: #212529;
+    font-family: "roboto";
+}
+
+.transactionHistory-next {
+    border: none;
+}
+
+.maxMoneyCategory {
+    color: #DC2626;
+    width: 100%;
+    height: 68px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    padding: 24px;
+}
+
+/*  Thống kê chi tiêu các tháng  */
+.monthlySpendingStatistics {
+    width: 768px;
+    height: 195px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    gap: 8px;
+    margin: 24px auto;
+
+}
+
+/*  Thống kê chi tiêu các tháng-list */
+.monthlySpendingStatisticsList {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.monthlySpendingStatisticsList-line {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #E5E7EB;
+    margin-bottom: 5px;
+}
+
+footer {
+    background-color: #4338CA;
+    height: 68px;
+    text-align: center;
+    padding-top: 24px;
+    color: white;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+/* thông báo xoá */
+#deleteNotification{
+    position: fixed;
+   display: none;
+   height: 135px;
+   width: 200px;
+   border: none;
+   background-color: white;
+   top: 100px;
+   right: 191px;
+   border-radius: 12px;
+   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+   padding: 10px;
+    align-content: center;
+}
+.btnDlt {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+ }
+ .btnDlt button{
+    border-radius: 4px;
+    height:30px;
+ }
+  #btnDlt_no{
+    background-color: rgb(190, 53, 53);
+    color: white;
+    border: none;
+ }
+ 
+  #btnDlt_yes{
+    background-color: #11d91e;
+    color: white;
+    border: none;
+    
+ }
+ /*  thông báo xoá giao dịch */
+ /* #deleteTransaction{
+    position: fixed;
+    display: none;
+    height: 135px;
+    width: 200px;
+    border: none;
+    background-color: white;
+    top: 100px;
+    right: 191px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+     align-content: center;
+ }
+ #btnDltTran_no{
+    background-color: rgb(190, 53, 53);
+    color: white;
+    border: none;
+ }
+ 
+  #btnDltTran_yes{
+    background-color: #11d91e;
+    color: white;
+    border: none;
+    
+ } */
