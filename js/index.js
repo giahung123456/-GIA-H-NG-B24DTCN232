@@ -387,10 +387,11 @@ function deleteTransactionHistory() {
 
         if (categoryIndex !== -1) {
           monthlyCategories[monthIndex].categories.splice(categoryIndex, 1)
-
+          localStorage.setItem("monthlyCategories", JSON.stringify(monthlyCategories))
           // Nếu sau khi xoá, tháng không còn danh mục nào thì xoá luôn cả tháng
           if (monthlyCategories[monthIndex].categories.length === 0) {
             monthlyCategories.splice(monthIndex, 1)
+            localStorage.setItem("monthlyCategories", JSON.stringify(monthlyCategories))
           }
         }
 
