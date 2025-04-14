@@ -365,7 +365,7 @@ section {
     height: 38px;
 }
 
-.search-text {
+#search-text {
     color: #9CA3AF;
     height: 100%;
     width: 158.55px;
@@ -375,7 +375,7 @@ section {
     text-align: left;
 }
 
-.sortBtn {
+#sortBtn {
     color: #9CA3AF;
     height: 100%;
     width: 158.55px;
@@ -423,7 +423,7 @@ section {
 }
 
 /* phân trang lịch sử giao dịch */
-.pagination {
+#pagination {
     display: flex;
     justify-content: center;
 
@@ -465,13 +465,13 @@ nav div:nth-child(5):hover {
     border-radius: 5px;
 }
 
-.transactionHistory-prev {
+#transactionHistory-prev {
     background-color: #E9ECEF;
     color: #212529;
     font-family: "roboto";
 }
 
-.transactionHistory-next {
+#transactionHistory-next {
     border: none;
 }
 
@@ -563,7 +563,57 @@ footer {
     
  }
  /*  thông báo xoá giao dịch */
- /* #deleteTransaction{
+ #deleteTransaction{
+    position: fixed;
+   display: none;
+   height: 135px;
+   width: 200px;
+   border: none;
+   background-color: white;
+   top: 100px;
+   right: 191px;
+   border-radius: 12px;
+   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+   padding: 10px;
+    align-content: center;
+}
+#btnDltTran_no{
+    background-color: rgb(190, 53, 53);
+    color: white;
+    border: none;
+ }
+ 
+#btnDltTran_yes{
+    background-color: #11d91e;
+    color: white;
+    border: none;
+    
+ }
+ /*  tìm kiếm giao dịch */
+ #searchTransaction{
+    display: none;
+    position: fixed;
+    border: 5px solid black;
+    background-color: #e2ac70;
+    width: 200px;
+    height: 200px;
+    top: 40%;
+    right: 45%;
+    padding: 10px;
+    gap: 5px;
+}
+#searchTransaction button{
+    margin-top: 10px;
+    /* height: 100%; */
+}
+#searchBtn{
+    background-color: #11d91e;
+}
+#editExitSearch{
+    background-color: rgb(218, 140, 140);
+}
+/* sắp xếp */
+#noticeSort{
     position: fixed;
     display: none;
     height: 135px;
@@ -576,16 +626,35 @@ footer {
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
     padding: 10px;
      align-content: center;
- }
- #btnDltTran_no{
-    background-color: rgb(190, 53, 53);
-    color: white;
+}
+#btnIncrease{
+    background-color: #4add54;
+}
+#btnReduce{
+    background-color: #e47878;
+}
+#displaySort{
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    background-color: #f0ecb9;
+    height: 300px;
+    width: 300px;
     border: none;
- }
- 
-  #btnDltTran_yes{
-    background-color: #11d91e;
-    color: white;
+    top: 100px;
+    right: 35px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px rgba(171, 122, 7, 0.3);
+    padding: 10px;
+     /* align-content: center; */
+}
+#exitNoticeSort{
+    background-color: #4add54;
+    width: 50px;
+    height: 30px;
+    text-align: center;
     border: none;
+    border-radius: 5px ;
+    margin-top: 10px;
     
- } */
+}

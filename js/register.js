@@ -32,7 +32,7 @@ let format_email = document.getElementById(`format_email`)
 let exist_email = document.getElementById(`exist_email`)
 
 //kiểm tra đăng kí
-const storedUsers = JSON.parse(localStorage.getItem("users"))
+const storedUsers = JSON.parse(localStorage.getItem("users")) || []
 accountSignUp.addEventListener(`click`, function () {
     let findUsername = storedUsers.find(function (el) {
         return el.username === username.value.trim()
@@ -170,8 +170,8 @@ accountSignUp.addEventListener(`click`, function () {
             password: password.value,
             email: email.value,
         }
-        users.push(newUser)
-        localStorage.users = JSON.stringify(users)
+        storedUsers.push(newUser);
+        localStorage.setItem("users", JSON.stringify(storedUsers));
 
         window.location.href = 'login.html'
     }

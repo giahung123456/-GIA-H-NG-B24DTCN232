@@ -1,7 +1,7 @@
 //Xử lý logic đăng nhập
 
 // JSON.parse(localStorage.users)
-const storedUsers = JSON.parse(localStorage.getItem("users"))
+const storedUsers = JSON.parse(localStorage.getItem("users")) || []
 // console.log(JSON.parse(localStorage.users)[2].password)
 // console.log(storedUsers)
 let loginName = document.getElementById(`loginName`)
@@ -36,7 +36,7 @@ accountSignIn.addEventListener(`click`, function () {
     }
     if (findUsername&&findUsername.password === password.value) {
         
-        window.location.href = `http://127.0.0.1:5500/STRUCTURE_FINANCE/index.html`
+        window.location.href = `http://127.0.0.1:5501/pages/index.html`
     }
 
 })

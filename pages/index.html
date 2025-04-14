@@ -19,12 +19,12 @@
             <div class="user_logout">
                 <div>
                     Tài khoản
-                    <button id="arrowAccount" type="button">
+                    <button id="arrowAccount" >
                         <img id="btnShow" src="../assets/SVG.png" alt="Show account options">
                         <img id="btnHide" style="display: none;" src="../assets/SVG2.png" alt="Hide account options">
                     </button>
                 </div>
-                <button style="display: none;" id="logout" type="button">Đăng xuất</button>
+                <button style="display: none;" id="logout" >Đăng xuất</button>
             </div>
         </header>
         <div id="logoutNotification">
@@ -39,6 +39,13 @@
             <div class="btnDlt">
                 <button id="btnDlt_yes" type="button">Có</button>
                 <button id="btnDlt_no" type="button">Không</button>
+            </div>
+        </div>
+        <div id="deleteTransaction">
+            <div class="center-text">Bạn có chắc muốn xoá lịch sử giao dịch này không?</div>
+            <div class="btnDlt">
+                <button id="btnDltTran_yes">Có</button>
+                <button id="btnDltTran_no" >Không</button>
             </div>
         </div>
         <article>
@@ -86,6 +93,15 @@
                     <button type="button" id="editExitSuccess">Thoát</button>
                 </form>
             </div>
+            <div id="searchTransaction">
+                <form>
+                    <label for="searchProduct">sản phẩm:</label>
+                    <input type="text" id="searchProduct">
+                    <button  id="searchBtn">tìm kiếm</button>
+                    <button id="editExitSearch">Thoát</button>
+                </form>
+            </div>
+         
             <div class="monthlyCategoryManagement">
                 <div class="monthlyCategoryManagement-text">
                     <span class="main-icon" aria-label="Briefcase icon">💼</span>
@@ -108,11 +124,9 @@
                     </div>
                 </div>
             </div>
-            <div class="spending">
-                <label for="spending-numberMoney">Số tiền:</label>
+            <div class="spending">            
                 <input id="spending-numberMoney" placeholder="Số tiền" type="number">
                 <button class="spending-text" type="button">Tiền chi tiêu</button>
-                <label for="spending-note">Ghi chú:</label>
                 <input id="spending-note" placeholder="Ghi chú" type="text">
                 <button id="spending-addBtn" type="button">Thêm</button>
             </div>
@@ -123,9 +137,9 @@
                     Lịch sử giao dịch
                 </div>
                 <div class="search-sort">
-                    <button class="search-text" type="button"><img src="../assets/SVG (1).png" alt="Search icon">Tìm nội dung</button>
+                    <button id="search-text" type="button"><img src="../assets/SVG (1).png" alt="Search icon">Tìm nội dung</button>
                     <button class="searchBtn" type="button"><img src="../assets/SVG (3).png" alt="Search button"></button>
-                    <button class="sortBtn" type="button">Sắp xếp theo giá</button>
+                    <button id="sortBtn" type="button">Sắp xếp theo giá</button>
                 </div>
                 <div id="transactionHistory_list">
                     <div class="transactionHistory-listLine">
@@ -137,15 +151,24 @@
                         <div class="transactionHistory-listLine_delete">Xoá</div>
                     </div>
                 </div>
-                <div class="pagination">
+                <div id="noticeSort">
+                    <div >bạn sắp xếp tiền tăng dần hay giảm dần</div>
+                    <button id="btnIncrease">tăng dần</button>
+                    <button id="btnReduce">giảm dần</button>
+                </div>
+                <div id="displaySort">
+                    sản phẩm đã sắp xếp:
+                </div>
+                <div id="pagination">
                     <nav>
-                        <div class="transactionHistory-prev">Previous</div>
-                        <div>1</div>
-                        <div>2</div>
-                        <div>3</div>
-                        <div class="transactionHistory-next">Next</div>
+                        <div id="transactionHistory-prev">Previous</div>
+                        <div id="btnOne">1</div>
+                        <div id="btnTwo">2</div>
+                        <div id="btnThree">3</div>
+                        <div id="transactionHistory-next">Next</div>
                     </nav>
                 </div>
+             
             </div>
             <div class="maxMoneyCategory">
                 <div>Danh mục "Tiền ăn" đã vượt giới hạn: 1,060,000 / 1,000,000 VND</div>
@@ -168,13 +191,13 @@
                     <div>2025-03</div>
                     <div>2,150,000 VND</div>
                     <div>5,000,000 VND</div>
-                    <div class="status-success">✅Đạt</div>
+                    <div class="status-success" style="color: green;">✅Đạt</div>
                 </div>
                 <div class="monthlySpendingStatisticsList-line">
                     <div>2025-04</div>
                     <div>2,350,000 VND</div>
                     <div>4,000,000 VND</div>
-                    <div class="status-error">Vượt</div>
+                    <div class="status-error" style="color: red;">Vượt</div>
                 </div>
             </div>
         </div>
